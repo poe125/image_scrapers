@@ -16,8 +16,7 @@ def main():
     this is the description of the main function
     """
     
-    ############## URL ##############
-    url = "" 
+    url = input("Enter the URL: ")
     key = "cdn"
     
     #get initiators
@@ -34,8 +33,10 @@ def main():
         image_paths.append(f"images/{i}.jpg")
         i += 1
         
-    ############## THE DEFINITE PATH TO YOUR OUTPUT ##############
-    outfile = ""
+    ############## DEFINITE PATH TO YOUR OUTPUT ##############
+    outfile_path = "C:/ドキュメント/github/image_scrapers/pdf_output/"
+    outfile_name = input("Enter the filename: ")
+    outfile = outfile_path + outfile_name
     images_to_pdf(image_paths, outfile)
 
     #clean the images in the file
